@@ -1,0 +1,63 @@
+﻿@model MatrixTask.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<!-- heading-banner start -->
+<div class="heading-banner" style="margin-top:20px">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="breadcrumb">
+                    <li><a href="~/Products/Index">Home</a></li>
+                    <li class="active">Details</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- heading-banner end -->
+<h2>Details Product</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Count)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Count)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Code } ,new { @class = "btn btn-info" }) |
+    @Html.ActionLink("Back to List", "Index",null, new { @class = "btn btn-primary" })
+</p>
